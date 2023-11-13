@@ -1,0 +1,28 @@
+{
+  "name": "@mojsoski/logger",
+  "version": "1.0.0",
+  "description": "A logging library using @mojsoski/streams",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "keywords": [],
+  "author": "Mihail Mojsoski",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@mojsoski/streams": "^1.0.1"
+  },
+  "scripts": {
+    "watch": "npx tsc --watch",
+    "build": "npx tsc",
+    "prepare": "npm run build",
+    "version": "git add -A lib",
+    "postversion": "git push && git push --tags",
+    "start": "node dist/example.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
